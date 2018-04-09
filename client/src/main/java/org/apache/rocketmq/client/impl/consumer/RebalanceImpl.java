@@ -398,6 +398,10 @@ public abstract class RebalanceImpl {
             }
         }
 
+        // Here the pull requests are created for each message queue.
+        // Potentially a message for each queue can be pulled here and the top msg is picked here.
+
+        System.out.printf("created pull request for all mq's %s %n ",pullRequestList,pullRequestList.size());
         this.dispatchPullRequest(pullRequestList);
 
         return changed;
