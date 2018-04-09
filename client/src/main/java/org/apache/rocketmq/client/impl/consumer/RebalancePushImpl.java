@@ -213,6 +213,7 @@ public class RebalancePushImpl extends RebalanceImpl {
 
     @Override
     public void dispatchPullRequest(List<PullRequest> pullRequestList) {
+        System.out.printf(" \n dispatching pull request \n");
         for (PullRequest pullRequest : pullRequestList) {
             this.defaultMQPushConsumerImpl.executePullRequestImmediately(pullRequest);
             log.info("doRebalance, {}, add a new pull request {}", consumerGroup, pullRequest);

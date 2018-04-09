@@ -25,6 +25,7 @@ public class Message implements Serializable {
     private static final long serialVersionUID = 8445773977080406428L;
 
     private String topic;
+    private int orderId;
     private int flag;
     private Map<String, String> properties;
     private byte[] body;
@@ -195,5 +196,13 @@ public class Message implements Serializable {
     public String toString() {
         return "Message [topic=" + topic + ", flag=" + flag + ", properties=" + properties + ", body="
             + (body != null ? body.length : 0) + "]";
+    }
+
+    public int getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
 }

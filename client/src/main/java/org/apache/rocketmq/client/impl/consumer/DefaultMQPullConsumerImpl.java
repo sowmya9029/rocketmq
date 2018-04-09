@@ -165,7 +165,7 @@ public class DefaultMQPullConsumerImpl implements MQConsumerInner {
         long timeout)
         throws MQClientException, RemotingException, MQBrokerException, InterruptedException {
         this.makeSureStateOK();
-
+        System.out.printf("SREE HARSHA KONDURI + MQPULLCONSUMER IMPL");
         if (null == mq) {
             throw new MQClientException("mq is null", null);
 
